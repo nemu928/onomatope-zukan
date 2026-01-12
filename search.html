@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オノマトペずかん/一覧</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class  ="l-header">
+    
+        <a href="#" class="c-logo">
+            <img src="image/logo_mono.png" alt="オノマトペずかんアイコン" class="c-logo__icon">
+        </a>
+    
+    </header>
+
+    <main class="l-main">
+
+    <h1>オノマトペ</h1>
+
+
+    
+    <div class="p-onomatope-list">
+    
+    <div class="c-card c-card--red js-modal-open" 
+         data-modal-target="modal-pokapoka" 
+         data-modal-color="#FF9898"
+         data-id="pokapoka">
+        <div class="c-card__image c-card__image--pokapoka"></div>
+        <span class="c-card__text">ぽかぽか</span> 
+    </div>
+    
+    <div class="c-card c-card--yellow js-modal-open" 
+         data-modal-target="modal-kirakira"  
+         data-modal-color="#ffee8f"
+         data-id="kirakira">
+        <div class="c-card__image c-card__image--kirakira"></div>
+        <span class="c-card__text">きらきら</span> 
+    </div>
+
+    <div class="c-card c-card--blue js-modal-open" 
+         data-modal-target="modal-zaza" 
+         data-modal-color="#A3C7FF"
+         data-id="zaza">
+        <div class="c-card__image c-card__image--zaza"></div>
+        <span class="c-card__text">ざーざー</span> 
+    </div>
+
+    <div class="c-card c-card--pink js-modal-open" 
+         data-modal-target="modal-fuwafuwa" 
+         data-modal-color="#FFD0DE"
+         data-id="fuwafuwa">
+        <div class="c-card__image c-card__image--fuwafuwa"></div>
+        <span class="c-card__text">ふわふわ</span> 
+    </div>
+
+    <div class="c-card c-card--orenge js-modal-open" 
+         data-modal-target="modal-gorogoro" 
+         data-modal-color="#FFDD9D"
+         data-id="gorogoro">
+        <div class="c-card__image c-card__image--gorogoro"></div>
+        <span class="c-card__text">ごろごろ</span> 
+    </div>
+
+    <div class="c-card c-card--blue js-modal-open" 
+         data-modal-target="modal-shii" 
+         data-modal-color="#A3C7FF"
+         data-id="shii">
+        <div class="c-card__image c-card__image--shii"></div>
+        <span class="c-card__text">シー</span> 
+    </div>
+
+    <div class="c-card c-card--purple js-modal-open" 
+         data-modal-target="modal-shiin" 
+         data-modal-color="#A3A5FF"
+         data-id="shiin">
+        <div class="c-card__image c-card__image--shiin"></div>
+        <span class="c-card__text">しーん</span> 
+    </div>
+
+    <div class="c-card c-card--orenge js-modal-open" 
+         data-modal-target="modal-nikoniko" 
+         data-modal-color="#FFDD9D"
+         data-id="nikoniko">
+        <div class="c-card__image c-card__image--nikoniko"></div>
+        <span class="c-card__text">にこにこ</span> 
+    </div>
+
+    <div class="c-card c-card--red js-modal-open" 
+         data-modal-target="modal-mochimochi" 
+         data-modal-color="#FF9898"
+         data-id="mochimochi"> 
+         <div class="c-card__image c-card__image--mochimochi"></div>
+        <span class="c-card__text">もちもち</span> 
+    </div>
+
+    <div class="c-card c-card--blue js-modal-open" 
+         data-modal-target="modal-tsurutsuru" 
+         data-modal-color="#A3C7FF"
+         data-id="tsurutsuru"> 
+         <div class="c-card__image c-card__image--tsurutsuru"></div>
+        <span class="c-card__text">つるつる</span> 
+    </div>
+
+
+    </div>
+    
+</main>
+<nav class="c-footer-nav">
+    <ul class="c-footer-nav__list">
+        <li class="c-footer-nav__item c-footer-nav__item--is-active">
+            <a href="inedx.html" class="c-footer-nav__link">
+                <span class="c-button c-button__icon c-button__icon--home"></span>
+                <span class="c-footer-nav__text">トップ</span>
+            </a>
+        </li>
+        <li class="c-footer-nav__item">
+            <a href="search.html" class="c-footer-nav__link">
+                <span class="c-button c-button__icon c-button__icon--search"></span>
+                <span class="c-footer-nav__text">さがす</span>
+            </a>
+        </li>
+        <li class="c-footer-nav__item">
+            <a href="album.html" class="c-footer-nav__link">
+                <span class="c-button c-button__icon c-button__icon--album"></span>
+                <span class="c-footer-nav__text">アルバム</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+<!------------------------------------------->
+<!---   各オノマトペの説明・チャレンジ---------->
+<!------------------------------------------->
+
+<div id="modal-pokapoka" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--pokapoka-w"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        あたたかくて、おひさまのしたにいるような、いいきもちのことだよ。<br>
+                        あったかくてきもちがいいときにつかうよ。<br><br>
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m" style="margin-top: 16px;">
+                        おひさまがぽかぽか。<br>
+                        からだやこころがあたたかくなったときにもつかえるよ。
+                    </p>
+                    <div style="margin-top: 30px;  border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-nuance">類語とのニュアンスの差</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            <strong>ぽかぽか</strong>：環境がもたらす熱。日差しや部屋の空気など、包み込まれるような心地よさ。<br>
+                            <strong>ほかほか</strong>：物体が発する熱。食べ物や湯気など、触れて熱い状態。
+                        </p>
+                        <p class="p-content__text p-content__text--size-s icon-arrow-refresh">言い換え表現</p>
+                        <p class="p-content__text p-content__text--size-xxs">
+                            暖かい、血行促進、リラックス、心地よい
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">ぽかぽかしてみよう！</p>
+                    
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                お外に出てみる、お風呂に入ってみる、おふとんにはいってみる
+                            </p>
+                            <p class="p-content__text p-content__text--size-xxs" style="text-align: left; margin-top: 16px; color: #666;">
+                                <strong>お家の方へ：</strong><br>
+                                晴れた日に日向ぼっこをしたり、お風呂上がりにバスタオルで包みながら、「ぽかぽかして気持ちいいね」と声をかけてみてください。温かいという感覚と言葉を結びつけてあげましょう。
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="pokapoka">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-kirakira" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--kirakira"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-kirakira">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-kirakira">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-kirakira" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        まぶしくかがやいているときにつかうことば。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                       うみ や ほうせき が「きらきら」ひかっているね。<br>
+                        よぞらのおほしさまも「きらきら」してきれいだよ。
+                    </p>
+                    <div style="margin-top: 30px;  border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-nuance">類語とのニュアンスの差</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            <strong>きらきら</strong>：光の反射による連続的な輝き。繊細で、美しく、持続性のある輝きを描写します。<br>
+                            <strong>ぴかぴか</strong>：一瞬の強い光沢や、新品のような輝き。<br>
+                            <strong>ぎらぎら</strong>：強烈で、やや威圧感のある強い光。
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-kirakira" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">きらきらを探そう！</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                おうちの中で、光って見えるものや、ピカピカのシールを探してごらん。そのおもちゃに電気の光を当ててみて！「きらきら」って反射して見えるかな？
+                            </p>
+                            <p class="p-content__text p-content__text--size-xxs" style="text-align: left; margin-top: 16px; color: #666;">
+                                <strong>お家の方へ：</strong><br>
+                                スプーンやガラスのコップなど、光を反射するものを一緒に探してみましょう。「ここもきらきらしてるね！」と、お子さまの発見を共感して褒めてあげると、観察力が育ちます。
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="kirakira">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-zaza" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--zaza"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-zaza">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-zaza">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-zaza" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        たくさん あめ がふっているときのおとだよ。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                        たくさんあめがふっているときに「ざーざー」ってきこえるよ。<br>
+                        じゃぐちをたくさんひねったときも「ざーざー」になるよ。
+                    </p>
+                    <div style="margin-top: 30px;  border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-book">心理的・物語的効果</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            文学作品において「ザーザー」という雨音は、登場人物の不安や悲嘆といった感情を増幅させたり、逆に過去の清算（リセット）を象徴したりします。
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-zaza" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">「ざーざー」を聞いてみよう！</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                おふろや洗面台で、水道の蛇口を大きくひねってごらん。「ジャー」とか「ザー」って、勢いのいい水の音が聞こえるかな？たくさんの水が流れると「ざーざー」になるよ！
+                            </p>
+                            <p class="p-content__text p-content__text--size-xxs" style="text-align: left; margin-top: 16px; color: #666;">
+                                <strong>お家の方へ：</strong><br>
+                                雨の日に少し窓を開けて雨音を聞いたり、お風呂場でシャワーを強めに出して音を聞かせてみましょう。「すごい音だね、ざーざーだね」と、音の勢いを言葉にして伝えてみてください。
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="zaza">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-gorogoro" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--gorogoro"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-gorogoro">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-gorogoro">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-gorogoro" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        かみなりやおなかがすいたときにきこえるおとだよ。<br>
+                        おおきくておもいものがうごくときにもつかえるよ。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                        かみなりのおとが「ゴロゴロ」きこえてきたよ。<br>
+                        おなかがすくと、「ゴロゴロ」っておなかのおとがなることがあるよ。
+                    </p>
+                    <div style="margin-top: 60px; padding-top: 30px; border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-nuance">類語とのニュアンスの差</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            大きく重いものが転がる音、または雷鳴や腹鳴りなど、低く響く音を表します。「ころころ」（小さくて軽いものが転がる様子）とは対照的に、重量感や迫力を伴う表現です。
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-gorogoro" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">ごろごろしてみよう！</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                おふとんの上で横になって、体をごろごろ転がしてみよう。また、雷が鳴っているときは、おへそを隠して音を聞いてみてね。
+                            </p>
+                            <p class="p-content__text p-content__text--size-xxs" style="text-align: left; margin-top: 16px; color: #666;">
+                                <strong>お家の方へ：</strong><br>
+                                ボールが転がる様子を見せたり、雷の音がした時に「空がごろごろ言ってるね」と実況してあげましょう。お布団の上で一緒に転がってスキンシップを楽しむのもおすすめです。
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="gorogoro">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-fuwafuwa" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--fuwafuwa"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-fuwafuwa">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-fuwafuwa">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-fuwafuwa" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        かるくて やわらかいもの にさわったときにつかうよ。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                        ぬいぐるみが「ふわふわ」だね。<br>
+                        そらのくもや、わたがしも「ふわふわ」しているね。
+                    </p>
+                    <div style="margin-top: 30px; border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-arrow-expand">表現の広がり</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            軽くて柔らかい質感や、宙に浮かんでいるような浮遊感を表現します。ポジティブな心地よさを表す一方、実体がないことや精神的な不安定さ（地に足がついていない状態）を暗示することもあります。
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-fuwafuwa" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">「ふわふわ」を感じよう！</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                おうちの中で、「ふわふわ」しているものを探してごらん。ぬいぐるみの毛や、新しいタオル、毛布などを、ぎゅーっと触ってみよう！
+                            </p>
+                            <p class="p-content__text p-content__text--size-xxs" style="text-align: left; margin-top: 16px; color: #666;">
+                                <strong>お家の方へ：</strong><br>
+                                ぬいぐるみ、タオル、焼きたてのパンなど、手触りの良いものを触らせて、「ふわふわだね」と優しく声をかけましょう。硬いものとの違いを比較させると、より理解が深まります。
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="fuwafuwa">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-shii" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--shii"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-shii">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-shii">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-shii" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        「しずかにしてね」 とひとにつたえるときのことばだよ。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                        おとをたてないでほしいときに、くちのまえにゆびをあてて「シー」ってするよ。<br>
+                        としょかんや、だれかがねているときは「シー」だよ。
+                    </p>
+                    <div style="margin-top: 60px; padding-top: 30px; border-top: 2px dashed #eee;">
+                        
+                        <p class="p-content__text p-content__text--size-s icon-file">由来と効果</p>
+                        
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            「シー」という摩擦音（Hushing sound）は、多くの言語で沈黙を要求する際の音として使われます。口を閉じ、息を吐き出す音であるため、周囲に気づかれにくい「静かな命令」として機能します。
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-shii" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">しずかにする合図！</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                ママやパパに、「シー」のジェスチャー（指を口の前に持ってくる） をやってみて。みんながすぐに静かになってくれたかな？
+                            </p>
+                            <p class="p-content__text p-content__text--size-xxs" style="text-align: left; margin-top: 16px; color: #666;">
+                                <strong>お家の方へ：</strong><br>
+                                遊びの一環として、「シーと言ったらお口をチャック」というルールでゲームをしてみましょう。上手（じょうず）に静かにできたら、「かっこよく『シー』できたね！」とたくさん褒めてあげてください。
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="shii">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-shiin" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--shiin"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-shiin">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-shiin">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-shiin" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        まったくおとがなくて、とてもしずかなようすをあらわすことばだよ。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                        みんながねているよるは、「しーん」とおへやがしずかだね。<br>
+                        いきなりでんきがきえると、あたりが「しーん」として、びっくりするね。
+                    </p>
+                    <div style="margin-top: 60px; padding-top: 30px; border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-nuance">類語とのニュアンスの差</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            <strong>しーん</strong>：聴覚的な無音に特化。人や物があっても、一切の音がしない状態。緊張や非日常感を伴うことが多いです。<br>
+                            <strong>ひっそり</strong>：人目につかず、目立たない様子。<br>
+                            <strong>もぬけの殻</strong>：人がいなくなって空っぽであること（物理的な不在）。
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-shiin" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">耳を澄ましてみよう</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                おもちゃの音やテレビの音をぜんぶ消して、目をつむってごらん。どんな音が聞こえるかな？もし何も聞こえなくて、とっても静かだったら、それが「しーん」だよ！
+                            </p>
+                            <p class="p-content__text p-content__text--size-xxs" style="text-align: left; margin-top: 16px; color: #666;">
+                                <strong>お家の方へ：</strong><br>
+                                テレビや音楽を消して、数秒間だけ目を閉じてみましょう。「どんな音が聞こえるかな？」「しーんとしてるね」と問いかけ、静寂そのものを楽しむ時間を作ってみてください。
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="shiin">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-nikoniko" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--nikoniko"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-nikoniko">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-nikoniko">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-nikoniko" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        とてもうれしかったり、たのしいきもちのときにする、やさしいえがおのことだよ。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                        おいしいおやつをたべたとき、みんな「にこにこ」するね。<br>
+                        お友だちとあそんでたのしいときも「にこにこ」えがおになるね。
+                    </p>
+                    <div style="margin-top: 60px; padding-top: 30px; border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-bell-ringing">日本語での特徴</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            日本語には笑顔のオノマトペが豊富ですが、「にこにこ」は「くすくす」（声を抑えた笑い）や「げらげら」（大声で笑う）とは異なり、声を出さず、静的で持続的な笑顔を表すのが特徴です。
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-nikoniko" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">にこにこをうつそう！</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                ママやパパに、おもちゃをあげたり、「ありがとう」って言ってみよう。ママやパパが「にこにこ」笑い返してくれたかな？
+                            </p>
+                            <p class="p-content__text p-content__text--size-xxs" style="text-align: left; margin-top: 16px; color: #666;">
+                                <strong>お家の方へ：</strong><br>
+                                鏡の前で一緒に笑顔を作ってみたり、お子さまが笑っている時に「〇〇ちゃんがにこにこだと、ママ（パパ）も嬉しいな」と伝えてあげましょう。自分の表情が周りを幸せにすることを教えてあげてください。
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="nikoniko">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-mochimochi" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--mochimochi"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-mochimochi">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-mochimochi">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-mochimochi" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        やわらかくて、だんりょくがあるようすをあらわすことばだよ。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                        おもちや、やきたてのパンみたいに、さわるとやわらかくて、すいつくようなかんじのことだよ。<br>
+                        あかちゃんのほっぺたも「もちもち」だね。
+                    </p>
+                    <div style="margin-top: 60px; padding-top: 30px; border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-nuance">類語とのニュアンスの差</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            <strong>ふわふわ</strong>：空気を含んでいて軽い柔らかさ。（例：綿あめ、雲）<br>
+                            <strong>もちもち</strong>：密度が高く、適度な水分と弾力（反発力）がある柔らかさ。（例：大福、タピオカ、赤ちゃんの肌）
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-mochimochi" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">「もちもち」探し！</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                自分のほっぺたや、二の腕を指でつんつんしたり、少しつまんでみて。指を押し返してくるような、ぷにぷにした感じがしたら、それが「もちもち」だよ！
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="mochimochi">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-tsurutsuru" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div> 
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text p-content__text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <div class="c-modal__main-image c-modal__main-image--tsurutsuru"></div>
+        </div>
+        <div class="c-tab-switch">
+            <div class="c-tab-switch__header">
+                <button class="c-tab-switch__trigger c-tab-switch__trigger--is-active js-tab-trigger" data-tab-id="explanation-tsurutsuru">
+                    <span class="p-content__text p-content__text--size-s">かいせつ</span>
+                </button>
+                <button class="c-tab-switch__trigger js-tab-trigger" data-tab-id="challenge-tsurutsuru">
+                    <span class="p-content__text p-content__text--size-s">チャレンジ</span>
+                </button>
+            </div>
+            <div class="c-tab-switch__body">
+                <div id="explanation-tsurutsuru" class="c-tab-switch__content">
+                    <p class="p-content__text p-content__text--size-m">
+                        なめらかですべるようすや、めんをたべるおとをあらわすことば。
+                    </p>
+                    <p class="p-content__text p-content__text--size-xs" style="margin-top: 24px;">
+                        たとえば、、
+                    </p>
+                    <p class="p-content__text p-content__text--size-m">
+                        こおりやガラスみたいに、でこぼこがなくて、よくすべるようすのことだよ。<br>
+                        うどんやそばを、おくちのなかにすいこむときも「つるつる」っていうよ。
+                    </p>
+                    <div style="margin-top: 60px; padding-top: 30px; border-top: 2px dashed #eee;">
+                        <p class="p-content__text p-content__text--size-s icon-active">触覚と感触</p>
+                        <p class="p-content__text p-content__text--size-xxs" style="text-align: left;">
+                            <strong>触覚</strong>：摩擦係数が限りなくゼロに近い、滑らかな表面状態。（例：むきたてのゆで卵、凍った路面）<br>
+                            <strong>聴覚</strong>：日本独自の麺文化において、麺と唇が触れ合う音や喉越しの良さを表現する「美味しい音」です。
+                        </p>
+                    </div>
+                </div>
+                <div id="challenge-tsurutsuru" class="c-tab-switch__content c-tab-switch__content--is-hidden">
+                    <p class="p-content__text p-content__text--size-m">つるつる滑り台</p>
+                    <div class="c-accordion">
+                        <button type="button" class="c-accordion__trigger p-content__text--size-s icon-light js-accordion-trigger">
+                            ヒント
+                        </button>
+                        <div class="c-accordion__content">
+                            <p class="p-content__text p-content__text--size-s">
+                                石鹸で手を洗っているとき、泡がついた手と手をこすり合わせてみて。手がつるっと滑って、捕まえられない感じがするよね？これが「つるつる」だよ！
+                            </p>
+                        </div>
+                    </div>
+                    <button class="c-btn-challenge js-challenge-btn" data-id="tsurutsuru">
+                        できた！
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

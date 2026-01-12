@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オノマトペずかん</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading" class="c-loading">
+        <div class="c-loading__inner">
+            <div class="c-loading__logo-wrapper">
+                <img src="image/logo_mono.png" alt="" class="c-loading__logo c-loading__logo--mono">
+                <img src="image/logo_color.png" alt="オノマトペずかん" class="c-loading__logo c-loading__logo--color">
+            </div>
+        </div>
+    </div>
+    <header class  ="l-header">
+    
+        <a href="#" class="c-logo">
+            <img src="image/logo_mono.png" alt="オノマトペずかんアイコン" class="c-logo__icon">
+        </a>
+    
+    </header>
+
+    <main class="l-main">
+
+    
+
+    <section class="p-features-section">
+        <div class="p-features-section__contents">
+            <h2>オノマトペずかんとは</h2>
+            <p class="p-content__text p-content__text--size-l">オノマトペずかんは、いつもの日常に潜むオノマトペの不思議を、親子で一緒に探求するWeb図鑑です。</p>
+            <p class="p-content__text p-content__text--size-l">１つのオノマトペから、たくさんの知識や会話が生まれるような体験を届けたいと考えています。</p>
+        </div>
+    </section>
+
+    <section class="p-usage-section">
+    <div class="l-inner"> <h2 class="c-section-title" style="text-align:center; color:#fff; margin-bottom:24px;">このサイトの使い方</h2>
+
+        <ul class="p-usage-section__step-list"> 
+            
+            <li class="p-usage-section__step-list__item">
+                <h3>1. さがす</h3>
+                <p class="p-content__text p-content__text--size-m">
+                    今の気分や、気になる色からカードを選んでみよう。「どんな音がするかな？」と想像しながらタップしてみてね。
+                </p>
+                <img src="image/step01.png" alt="オノマトペをさがす説明画像">
+            </li>
+            
+            <li class="p-usage-section__step-list__item">
+                <h3>2. しる</h3>
+                <p class="p-content__text p-content__text--size-m">
+                    「きらきら」と「ぴかぴか」はどう違う？ 子供向けの解説と、大人向けの豆知識で、言葉の面白さに触れてみよう。
+                </p>
+                <img src="image/search_1.png" alt="学んで実践する説明画像">
+            </li>
+            
+            <li class="p-usage-section__step-list__item">
+                <h3>3. やってみる・のこす</h3>
+                <p class="p-content__text p-content__text--size-m">
+                    言葉の意味がわかったらチャレンジ！遊んだ思い出は、素材を印刷してアルバムに残そう。
+                </p>
+                <a href="album.html" class="c-button c-button--primary" style="margin-top:10px; display:inline-block; font-size:14px;">アルバム素材をみる</a>
+                
+                <img src="image/item_howto.png" alt="成長を記録する説明画像">
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+    
+
+    <section class="p-read-section">
+        
+        <p class="p-read-section__paragraph js-fade-in-item">
+            <span class="p-content__text p-content__text--size-l">
+                調べる、遊ぶ、<br>
+                そして成長を記録する。
+            </span>
+        </p>
+
+        <p class="p-read-section__paragraph js-fade-in-item">
+            <span class="p-content__text p-content__text--size-l">
+                このWeb図鑑が、<br>
+                あなたの親子の会話をより豊かにし、言葉の成長を支えます。
+            </span>
+        </p>
+
+        <p class="p-read-section__paragraph js-fade-in-item">
+            <span class="p-content__text p-content__text--size-l">
+                さあ、一緒にことばの冒険に出かけましょう！
+            </span>
+        </p>
+
+
+    
+        <a href="search.html" class="btn btn--read btn--radius btn--cubic">オノマトペをさがす
+            <span class="c-button c-button__icon c-button__icon--search "></span></a>
+       
+    </section>
+
+</main>
+
+<nav class="c-footer-nav">
+    <ul class="c-footer-nav__list">
+        <li class="c-footer-nav__item c-footer-nav__item--is-active">
+            <a href="#" class="c-footer-nav__link">
+                <span class="c-button c-button__icon c-button__icon--home"></span>
+                <span class="c-footer-nav__text">トップ</span>
+            </a>
+        </li>
+        <li class="c-footer-nav__item">
+            <a href="search.html" class="c-footer-nav__link">
+                <span class="c-button c-button__icon c-button__icon--search"></span>
+                <span class="c-footer-nav__text">さがす</span>
+            </a>
+        </li>
+        <li class="c-footer-nav__item">
+            <a href="album.html" class="c-footer-nav__link">
+                <span class="c-button c-button__icon c-button__icon--album"></span>
+                <span class="c-footer-nav__text">アルバム</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<script src="js/script.js"></script>
+<script src="js/fade-in.js"></script>
+</body>
+
+
+</html>

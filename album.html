@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オノマトペずかん/アルバム</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="l-header">
+        <a href="inedx.html" class="c-logo">
+            <img src="image/logo_mono.png" alt="オノマトペずかんアイコン" class="c-logo__icon">
+        </a>
+    </header>
+
+    <nav class="c-footer-nav">
+        <ul class="c-footer-nav__list">
+            <li class="c-footer-nav__item"><a href="inedx.html" class="c-footer-nav__link"><span class="c-button c-button__icon c-button__icon--home"></span><span class="c-footer-nav__text">トップ</span></a></li>
+            <li class="c-footer-nav__item"><a href="search.html" class="c-footer-nav__link"><span class="c-button c-button__icon c-button__icon--search"></span><span class="c-footer-nav__text">さがす</span></a></li>
+            <li class="c-footer-nav__item c-footer-nav__item--is-active"><a href="album.html" class="c-footer-nav__link"><span class="c-button c-button__icon c-button__icon--album"></span><span class="c-footer-nav__text">アルバム</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="l-main">
+        <div class="p-album-container">
+            <div class="p-section-header">
+                <h1 class="p-section-header__title">アルバム素材</h1>
+                <p class="p-section-header__desc">印刷して、ハサミで切って、<br>アルバムをかわいくデコレーションしよう！</p>
+            </div>
+
+            <div class="p-bento-grid">
+
+                <div class="p-bento-item p-bento-item--large p-bento-item--guide">
+                    <div class="p-bento-item__content">
+                        <h3>つかいかた</h3>
+                        <p>オノマトペずかんのキャラクターたちを、お子さまとの思い出作りに使いませんか？ 以下の2つの方法で自由に楽しんでみてください。</p>
+                        <img src="image/item_howto.png" alt="使い方イラスト">
+                        <p>1. 印刷して工作気分で <br>画像をダウンロードして印刷！ ハサミで切ってアルバムに貼ってみてください。</p>
+                        <p>2. スマホで手軽にデコレーション <br>画像をスマホに保存して、写真加工アプリのスタンプとして使えます。</p>
+                        <p class="p-content__text--size-xs">⚠️ おねがい <br>ご家庭で個人的に楽しむ範囲でご使用ください。</p>
+                    </div>
+                </div>
+
+                <!--<div class="p-bento-item p-bento-item--wide p-bento-item--frame js-modal-open" data-modal-target="modal-preview-frame" data-modal-color="#FFD0DE">
+                    <span class="c-tag">NEW</span>
+                    <h3>しゃしん フレーム</h3>
+                    <img src="image/item_fram.png" alt="写真フレーム">
+                    <p class="p-bento-item__sample-text">Sampleをみる</p>
+                </div>-->
+
+                <div class="p-bento-item p-bento-item--deco js-modal-open" data-modal-target="modal-preview-sticker" data-modal-color="#ffee8f">
+                    <h3>ステッカー</h3>
+                    <img src="image/item_sticker.png" alt="ステッカー">
+                    <p class="p-bento-item__sample-text">Sampleをみる</p>
+                </div>
+
+                <div class="p-bento-item p-bento-item--deco js-modal-open" data-modal-target="modal-preview-memo" data-modal-color="#A3C7FF">
+                    <h3>ひとこと メモ</h3>
+                    <img src="image/item_sticker-text.png" alt="メモ付き">
+                    <p class="p-bento-item__sample-text">Sampleをみる</p>
+                </div>
+
+                <div class="p-bento-item p-bento-item--wide p-bento-item--deco-set">
+                    <h3>いんさつして つかう</h3>
+                    <img src="image/onomatope_print.png" alt="印刷用セット">
+                    <p class="p-bento-item__text">A4サイズ / PDF</p>
+                    <a href="download/onomatope_print.pdf" download class="c-download-btn">まとめてDL</a>
+                </div>
+
+                <div class="p-bento-item p-bento-item--wide p-bento-item--deco-set">
+                    <h3>スマホ・PCで つかう</h3>
+                    <img src="image/onomatope_digital.png" alt="デジタル用セット">
+                    <p class="p-bento-item__text">背景透明 / PNG</p>
+                    <a href="download/onomatope_digital.zip" download class="c-download-btn">まとめてDL</a>
+                </div>
+            </div> </div>
+    </main>
+
+   <div id="modal-preview-frame" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div>
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <img src="image/item_fram.png" alt="プレビュー" class="c-modal__preview-img">
+        </div>
+        <div class="c-modal__download-area">
+            <p class="c-modal__download-title">ダウンロードけいしきを えらんでね</p>
+            <div class="c-modal__btn-group">
+                <a href="download/frame_digital.zip" download class="c-btn-download">
+                    <span class="c-btn-download__main">デジタル用</span>
+                    <span class="c-btn-download__sub">PNG</span>
+                </a>
+                <a href="download/frame_print.pdf" download class="c-btn-download">
+                    <span class="c-btn-download__main">いんさつ用</span>
+                    <span class="c-btn-download__sub">PDF</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-preview-sticker" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div>
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <img src="image/item_sticker_sample.png" alt="プレビュー" class="c-modal__preview-img">
+        </div>
+        <div class="c-modal__download-area">
+            <p class="c-modal__download-title">ダウンロードけいしきを えらんでね</p>
+            <div class="c-modal__btn-group">
+                <a href="download/sticker_digital.zip" download class="c-btn-download">
+                    <span class="c-btn-download__main">デジタル用</span><span class="c-btn-download__sub">PNG</span>
+                </a>
+                <a href="download/sticker_print.pdf" download class="c-btn-download">
+                    <span class="c-btn-download__main">いんさつ用</span><span class="c-btn-download__sub">PDF</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-preview-memo" class="c-modal">
+    <div class="c-modal__overlay js-modal-close"></div>
+    <div class="c-modal__inner">
+        <button class="c-modal__close js-modal-close">
+            <span class="c-modal__close-text">とじる</span>
+            <span class="c-modal__icon c-modal__icon--x"></span>
+        </button>
+        <div class="c-modal__main-content">
+            <img src="image/sticker-text_sample.png" alt="プレビュー" class="c-modal__preview-img">
+        </div>
+        <div class="c-modal__download-area">
+            <p class="c-modal__download-title">ダウンロードけいしきを えらんでね</p>
+            <div class="c-modal__btn-group">
+                <a href="download/memo_digital.zip" download class="c-btn-download">
+                    <span class="c-btn-download__main">デジタル用</span><span class="c-btn-download__sub">PNG</span>
+                </a>
+                <a href="download/memo_print.pdf" download class="c-btn-download">
+                    <span class="c-btn-download__main">いんさつ用</span><span class="c-btn-download__sub">PDF</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/fade-in.js"></script>
+</body>
+</html>
