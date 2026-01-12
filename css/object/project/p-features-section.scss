@@ -1,0 +1,57 @@
+    // 2. サイトの説明 (Features/Introduction)
+@use "../../foundation/variables.scss" as var;
+
+
+.p-features-section{
+    position: relative;
+
+    padding-left: var.$spacing-m;
+    padding-right: var.$spacing-m;
+
+    min-width: 294px;
+    min-height:900px;
+
+    //背景ストライプ
+    background: repeating-linear-gradient(-45deg, var.$color-orenge, var.$color-orenge 40px, var.$color-cream 40px, var.$color-cream 80px);
+
+
+    &__contents{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        z-index: 1;
+
+        min-width: 320px;
+
+        text-align: justify;
+
+        h2{
+            padding-bottom: var.$spacing-xs;
+        }
+
+        &::after{ //円
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            z-index: -1;
+
+            width: 80vw;
+            height: 80vw;
+            min-width: 350px;
+            min-height: 350px;
+            max-width: 600px;
+            max-height: 600px;
+
+            border-radius: 50%;
+
+            background-color: var.$color-cream;
+        }
+    }
+
+}

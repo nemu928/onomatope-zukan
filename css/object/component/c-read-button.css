@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/ /*オノマトペ一覧へ飛ばすボタン*/
+a.btn--read.btn--cubic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 360px;
+  height: 63px;
+  background-color: #FFDD9D;
+  border-bottom: 5px solid #e0ac4a;
+}
+a.btn--read.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #e0ac4a;
+}
+
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+.fa-position-right {
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 1rem;
+}
+/*# sourceMappingURL=c-read-button.css.map */

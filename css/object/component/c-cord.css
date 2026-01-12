@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/ /*メディアクエリ機能*/ /*オノマトペ　カード*/
+.c-card {
+  display: inline-grid;
+  align-content: space-around;
+  justify-items: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+  padding: 8px;
+  width: 160px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.c-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.c-card:hover .c-card__image {
+  transform: scale(1.1);
+}
+.c-card__image {
+  width: 125px;
+  height: 125px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.3s ease;
+}
+.c-card__image--pokapoka {
+  background-image: url("../image/w_pokapoka.png");
+}
+.c-card__image--kirakira {
+  background-image: url("../image/w_kirakira.png");
+}
+.c-card__image--zaza {
+  background-image: url("../image/w_zaza.png");
+}
+.c-card__image--gorogoro {
+  background-image: url("../image/w_gorogoro.png");
+}
+.c-card__image--fuwafuwa {
+  background-image: url("../image/w_fuwafuwa.png");
+}
+.c-card__image--shii {
+  background-image: url("../image/w_shii.png");
+}
+.c-card__image--shiin {
+  background-image: url("../image/w_shiin.png");
+}
+.c-card__image--nikoniko {
+  background-image: url("../image/w_niconico.png");
+}
+.c-card__image--mochimochi {
+  background-image: url("../image/w_mochimochi.png");
+}
+.c-card__image--tsurutsuru {
+  background-image: url("../image/w_tsurutsuru.png");
+}
+.c-card__text {
+  color: #fcfcfc;
+  font-weight: bold;
+  text-align: end;
+}
+.c-card--orenge {
+  background-color: #FFDD9D;
+}
+.c-card--blue {
+  background-color: #A3C7FF;
+}
+.c-card--green {
+  background-color: #A9F0B0;
+}
+.c-card--pink {
+  background-color: #FFD0DE;
+}
+.c-card--purple {
+  background-color: #A3A5FF;
+}
+.c-card--red {
+  background-color: #FF9898;
+}
+.c-card--yellow {
+  background-color: #ffee8f;
+}
+.c-card.is-completed .c-card__image {
+  filter: grayscale(0%);
+}
+.c-card.is-completed::after {
+  content: "✔";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 215, 0, 0.9);
+  color: #fcfcfc;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  transform: rotate(15deg);
+  z-index: 10;
+  pointer-events: none;
+  -webkit-animation: stampPoyon 0.5s ease-out;
+          animation: stampPoyon 0.5s ease-out;
+}
+
+@-webkit-keyframes stampPoyon {
+  0% {
+    opacity: 0;
+    transform: scale(3) rotate(15deg);
+  }
+  60% {
+    transform: scale(0.8) rotate(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(15deg);
+  }
+}
+
+@keyframes stampPoyon {
+  0% {
+    opacity: 0;
+    transform: scale(3) rotate(15deg);
+  }
+  60% {
+    transform: scale(0.8) rotate(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(15deg);
+  }
+}
+/*# sourceMappingURL=c-cord.css.map */

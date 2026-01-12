@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/ /*メディアクエリ機能*/ /*main*/
+.l-main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fffdf5;
+  background-image: linear-gradient(#e0e0e0 1px, transparent 1px), linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+/*# sourceMappingURL=l-main.css.map */

@@ -1,0 +1,124 @@
+/*ボタン全般の設定*/
+@use "../../foundation/variables.scss" as var;
+.c-button{
+    display: block;
+
+    &__icon{
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+
+        &--search{
+
+            background-image: url(../image/icon_search.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &--home{
+
+            background-image: url(../image/icon_home.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &--album{
+
+            background-image: url(../image/icon_book.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+
+    .c-btn-challenge {
+    display: block;
+    margin: 30px auto 0;
+    width: 200px;
+    padding: 12px;
+    border-radius: 50px;
+    background-color: #ddd; // 最初はグレー
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 0 #bbb;
+
+    &:hover {
+        transform: translateY(2px);
+        box-shadow: 0 2px 0 #bbb;
+    }
+
+    // 押したあとの見た目
+    &.is-active {
+        background-color: var.$color-red; // 押すと赤くなる
+        box-shadow: 0 4px 0 darken(var.$color-red, 10%);
+        pointer-events: none; // もう押せないようにする
+    }
+}
+}
+
+// チャレンジ達成ボタンのスタイル
+// object/component/_c-btn.scss
+
+// object/component/_c-btn.scss
+
+.c-btn-challenge {
+    // ------------------------------------
+    // 最初からスタンプの形（未達成＝インクなし）
+    // ------------------------------------
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 0;
+    
+    width: 80px;  // サイズ
+    height: 80px; 
+    border-radius: 50%; // 正円にする
+
+    // 未達成時の見た目（薄いグレーの枠線だけ）
+    background-color: transparent; 
+    color: #ccc;          // 薄いグレーの文字
+    border: 3px dashed #ccc; // 点線で「ここに押すよ」感を出す
+    
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.5, 1.8, 0.5, 0.8); // 弾む動きの設定
+    
+    // ホバー時の動き（押せそうに見せる）
+    &:hover {
+        transform: scale(1.1) rotate(-5deg); // 少し大きくなって傾く
+        background-color: #f9f9f9;
+        color: #aaa;
+        border-color: #aaa;
+    }
+
+   // ============================================
+    // ★スタンプ状態（達成時）
+    // ============================================
+    &.is-active {
+        color: #ff5555;         
+        border: 4px double #ff5555;
+        background-color: #fff;     
+        
+        // ★変更: 文字サイズを少し小さくして収まりを良くする
+        font-size: 13px; 
+        
+        // ★追加: 文字の改行を禁止する
+        white-space: nowrap;
+
+        letter-spacing: 0.05em; // 文字間隔も少し詰める
+
+        transform: scale(1.1) rotate(-15deg);
+        box-shadow: none; 
+
+        &:hover {
+            opacity: 0.7;
+            transform: scale(1.0) rotate(-15deg);
+            background-color: #fff0f0;
+        }
+    }
+}

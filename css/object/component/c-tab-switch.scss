@@ -1,0 +1,280 @@
+// object/component/_c-tab-switch.scss
+
+@use "../../foundation/variables.scss" as var;
+@use "../../foundation/mixin.scss";
+
+.c-tab-switch {
+    // 高さ比率 (残り全部＝60%)
+    height: 60%;
+    flex-shrink: 0;
+    
+    // 幅を親要素に合わせる
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    background-color: transparent;
+
+    // 続きがあることを示す白ぼかし
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+        border-radius: 0 0 20px 20px;
+        pointer-events: none;
+    }
+
+    &__header {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        padding: 4px;
+
+        width: 260px;
+        height: 50px;
+
+        background-color: var(--modal-color, var.$color-primary);
+        border-radius: 50px;
+        box-shadow: 0 4px 6px rgba(0,0,0, 0.2); 
+    }
+
+    &__trigger {
+        background: none;
+        border: none;
+        border-radius: 50px;
+        width: 48%;
+        height: 100%;
+        cursor: pointer;
+        transition: all 0.2s;
+        
+        font-weight: bold;
+        font-size: var.$font-size-s;
+        
+        // ★修正1: 非アクティブ時の文字色を「茶色」に変更（白だと見えないため）
+        color: var.$color-text-base; 
+        opacity: 0.6; // 少し薄くして控えめにする
+
+        &--is-active {
+            background-color: #fff; 
+            
+            // ★修正2: アクティブ時の文字色
+            // カード色が薄い場合（#FFDD9Dなど）は、文字にすると読みにくいので
+            // ここも「茶色」にするのが一番安全で見やすいです。
+            color: var.$color-text-base; 
+            
+            // もし「どうしてもカード色にしたい」場合は以下を使いますが、薄い色は見えなくなります
+            // color: var(--modal-color, var.$color-primary);
+
+            opacity: 1;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+    }
+
+    &__body {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        
+        padding: 50px 50px 60px 50px; 
+        
+        overflow-y: scroll; 
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        background-color: #fff;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    &__content {
+        width: 100%;
+        height: auto;
+        
+        &--is-hidden {
+            display: none;
+        }
+
+        // テキストのスタイル調整
+        .p-content__text {
+            text-align: left;
+        }
+
+        // size-s（見出し）の設定
+        .p-content__text--size-s {
+            display: flex;       
+            align-items: center; 
+            
+            margin-top: 24px;
+            margin-bottom: 8px;   
+
+            // ★アイコンの「共通設定」
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 14px;        
+                height: 14px;       
+                margin-right: 8px;  
+                
+                // ★ここがポイント！
+                // 背景色を「カードの色」にする
+                background-color: var(--modal-color, var.$color-primary);
+                
+                // ★画像を「型抜き（マスク）」として使う設定
+                // (Chrome, Safari, Edgeなど用)
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                -webkit-mask-position: center;
+                
+                // (Firefoxなど用)
+                mask-repeat: no-repeat;
+                mask-size: contain;
+                mask-position: center;
+                
+                // デフォルトのアイコン（指定がない場合用）
+                -webkit-mask-image: url('../image/icon-default.png');
+                mask-image: url('../image/icon-default.png');
+            }
+
+            // ------------------------------------------------
+            // ★アイコンの「バリエーション」
+            // ------------------------------------------------
+            
+           // ヒント（電球）
+            &.icon-light::before {
+                -webkit-mask-image: url('./image/icon_lightbulb.png');
+                mask-image: url('./image/icon_lightbulb.png');
+            }
+
+            // ------------------------------------------------
+            // ★追加: 新しいアイコン定義
+            // ------------------------------------------------
+
+            // 類語とのニュアンスの差
+            &.icon-nuance::before {
+                -webkit-mask-image: url('../image/icon_nuance.png');
+                mask-image: url('../image/icon_nuance.png');
+            }
+
+            // 表現の広がり
+            &.icon-arrow-expand::before {
+                -webkit-mask-image: url('../image/icon_arrow-expand.png');
+                mask-image: url('../image/icon_arrow-expand.png');
+            }
+
+            // 心理的・物語的効果 / 由来
+            &.icon-book::before {
+                -webkit-mask-image: url('../image/icon_book.png');
+                mask-image: url('../image/icon_book.png');
+            }
+
+            // 言い換え表現
+            &.icon-arrow-refresh::before {
+                -webkit-mask-image: url('../image/icon_arrow-refresh.png');
+                mask-image: url('../image/icon_arrow-refresh.png');
+            }
+
+            // 触覚と感触 (つるつる等)
+            &.icon-active::before {
+                -webkit-mask-image: url('../image/icon_activity.png');
+                mask-image: url('../image/icon_activity.png');
+            }
+
+            // 日本語での特徴
+            &.icon-bell-ringing::before {
+                -webkit-mask-image: url('../image/icon_bell-ringing.png');
+                mask-image: url('../image/icon_bell-ringing.png');
+            }
+            
+            &.icon-file::before {
+                -webkit-mask-image: url('../image/icon_file.png');
+                mask-image: url('../image/icon_file.png');
+            }
+            // ★必要な分だけ増やしてください
+        }
+    }
+}
+
+// ------------------------------------------------
+// アコーディオン (ヒントの開閉)
+// ------------------------------------------------
+.c-accordion {
+    width: 100%;
+    margin-top: 24px;
+
+    // 1. トリガーボタン
+    &__trigger {
+        width: 100%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        
+        // p-content__text--size-s のスタイル（flexなど）を継承
+        // ※HTMLにクラスがついているので @extend は不要ですが、念の為継承させてもOK
+        // @extend .p-content__text--size-s; 
+        
+        // 矢印アイコン (下向き ∨)
+        position: relative;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            
+            // 右端に配置
+            margin-left: auto;
+            margin-right: 10px;
+            
+            // 矢印の線
+            border-right: 2px solid var.$color-text-base;
+            border-bottom: 2px solid var.$color-text-base;
+            
+            // デフォルト：下向き（45度回転）
+            transform: rotate(45deg); 
+            
+            transition: transform 0.3s ease;
+        }
+
+        // 開いている時 (JSで is-open がついた時)
+        // 矢印を上向き (∧) に回転
+        &.is-open::after {
+            transform: rotate(225deg); 
+        }
+    }
+
+    // 2. 中身 (隠す部分)
+    &__content {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: height 0.3s ease, opacity 0.3s ease;
+        
+        // 開いている時
+        &.is-open {
+            height: auto;
+            opacity: 1;
+            padding-top: 10px;
+        }
+
+        .p-content__text--size-s{
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

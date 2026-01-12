@@ -1,0 +1,30 @@
+/*メディアクエリ機能*/
+
+@use "variables" as var;
+
+
+//pc用スタイルを適用するMixin　(1024px以上)
+@mixin media-pc {
+    @media screen and (min-width: var.$breakpoint-pc){
+        @content;
+    }     
+}
+
+//タブレット用スタイルを適用するMixin　(768px以上)
+@mixin media-tab {
+    @media screen and (min-width:var.$breakpoint-tab){
+        @content;
+    }        
+}
+
+@mixin media-por {
+    @media screen and (orientation: portrait){
+        @content;
+    }
+}
+
+@mixin media-land {
+    @media screen and (orientation: landscape){
+        @content;
+    }
+}

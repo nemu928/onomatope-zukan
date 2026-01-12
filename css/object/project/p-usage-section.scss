@@ -1,0 +1,106 @@
+// object/project/_p-usage-section.scss
+@use "../../foundation/variables.scss" as var;
+@use "../../foundation/mixin.scss";
+
+.p-usage-section {
+    padding: var.$spacing-xl-m;
+    background-color: var.$color-blue;
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: var.$spacing-l;
+        // ★追加: 少し文字間を広げてゆったり見せる
+        letter-spacing: 0.05em; 
+    }
+
+    &__step-list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px; 
+
+        margin: 0 auto;
+        padding: var.$spacing-l; // ★変更: 少し広めに調整
+        
+        width: 100%;
+        max-width: 1000px;
+        box-sizing: border-box;
+
+        background-color: var.$color-primary; // 白背景
+        border-radius: 24px; // ★変更: 丸みを少し強くして親しみやすく
+        
+        // ★追加: やわらかい影をつけて立体感を出す
+        box-shadow: 0 10px 25px -5px rgba(var.$color-blue, 0.3);
+
+        @include mixin.media-pc {
+            flex-direction: row;
+            gap: 30px; // ★変更: PCの間隔を少し調整
+            align-items: stretch;
+            padding: 50px; // ★変更: PCではさらに広めに
+        }
+
+        &__item {  
+            width: 100%;       
+            text-align: center;              
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // ★追加: 矢印の位置合わせのために相対配置にする
+            position: relative;
+
+            @include mixin.media-pc {
+                flex: 1;
+                
+                // ------------------------------------------------
+                // ★追加: ステップ間の矢印 (PCのみ)
+                // ------------------------------------------------
+                // 最後の要素以外(1つ目と2つ目)の後ろに矢印をつける
+                &:not(:last-child)::after {
+                    content: ''; // ここに画像やアイコンフォントを入れることも可能
+                    position: absolute;
+                    top: 20px; // タイトルの高さに合わせる
+                    right: -20px; // 右側の隙間に配置
+                    
+                    // CSSで簡単な三角形（矢印）をつくる
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 8px 0 8px 12px; // 三角形の形
+                    border-color: transparent transparent transparent var.$color-blue; // 青い矢印
+                    opacity: 0.5; // 主張しすぎないように少し薄く
+                }
+            }
+
+            h3 {
+                // ★変更: フォントサイズを少し大きくし、色を濃い青に強調
+                font-size: 22px; 
+                color: var.$color-blue;
+                margin-bottom: 16px;
+                font-weight: bold;
+                // ★追加: 数字を強調するための装飾（下線など）はお好みで
+                // border-bottom: 2px solid var.$color-yellow; 
+                // display: inline-block;
+            }
+
+            p {
+                text-align: left;
+                width: 100%;
+                line-height: 1.7; // ★変更: 行間を少し広げて読みやすく
+                margin-bottom: 20px;
+                font-size: 15px; // ★変更: 少しだけ文字を大きく
+            }
+
+            img {
+                margin-top: auto;
+                // padding-top: var.$spacing-s; // 不要なので削除
+                width: 100%;
+                // ★変更: 正方形の画像が大きくなりすぎないように調整
+                max-width: 200px; 
+                height: auto;
+                object-fit: contain;
+                // ★追加: 画像にも少し角丸をつけて柔らかく
+                border-radius: 12px; 
+            }
+        }
+    }
+}

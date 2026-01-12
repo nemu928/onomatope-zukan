@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/ /*メディアクエリ機能*/
+.p-onomatope-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+  margin: 40px auto;
+  width: 370px;
+}
+@media screen and (min-width: 768px) {
+  .p-onomatope-list {
+    justify-content: flex-start;
+    width: 688px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .p-onomatope-list {
+    justify-content: space-around;
+    gap: 29px;
+    margin: 40px auto;
+    width: 1104px;
+  }
+}
+/*# sourceMappingURL=p-onomatope-list.css.map */

@@ -1,0 +1,191 @@
+@use "../../foundation/variables.scss" as var;
+@use "../../foundation/mixin.scss";
+
+.c-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999; 
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    
+    &--is-open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.7); 
+        z-index: -1; 
+    }
+    
+    &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10; 
+
+        width: 90%;
+        max-width: 350px;
+        height: 640px; 
+        max-height: 90vh;
+        
+        background-color: #fff; 
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        
+        display: flex;
+        flex-direction: column;
+        // ★修正点：hiddenを消して、ボタンを外に見えるようにする
+        overflow: visible; 
+    }
+
+    // 閉じるボタン
+    &__close {
+        position: absolute;
+        // ★位置の調整（お好みで数字を変えてください）
+        top: -25px;
+        right: -25px;
+        z-index: 100;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border: none;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+        &-text {
+            font-size: 10px;
+            color: #666;
+        }
+
+        @media screen and (max-width: 480px) {
+            top: -15px;
+            right: -15px;
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+    &__icon--x {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-image: url('../image/icon-close.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    // 上半分の画像エリア
+    &__main-content {
+        flex: 0 0 250px; 
+        width: 100%;
+        background-color: var(--modal-color, #ccc);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+        // ★修正点：modal本体の角丸に合わせて、背景色も丸くする
+        border-radius: 20px 20px 0 0; 
+    }
+
+    &__main-image {
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+        &--pokapoka-w { background-image: url('../image/w_pokapoka.png'); }
+        &--kirakira { background-image: url('../image/w_kirakira.png'); }
+        &--zaza { background-image: url('../image/w_zaza.png'); }
+        &--fuwafuwa { background-image: url('../image/w_fuwafuwa.png'); }
+        &--mochimochi{ background-image: url('../image/w_mochimochi.png'); }
+        &--tsurutsuru{ background-image: url('../image/w_tsurutsuru.png');}
+        &--shiin{background-image: url('../image/w_shiin.png');}
+        &--gorogoro{background-image: url('../image/w_gorogoro.png');}
+        &--shii{background-image: url('../image/w_shii.png');}
+        &--nikoniko {background-image: url('../image/w_niconico.png'); }
+    }
+
+    // プレビュー画像
+    &__preview-img {
+        max-width: 80%;
+        max-height: 250px;
+        object-fit: contain;
+        filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+    }
+
+    // 下半分のダウンロードエリア
+    &__download-area {
+        background-color: #fff;
+        padding: 24px 20px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__download-title {
+        font-weight: bold;
+        margin-bottom: 16px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    &__btn-group {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+    }
+}
+
+.c-btn-download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    padding: 12px 5px;
+    background-color: var(--modal-color, #eee);
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+
+    &:active {
+        transform: translateY(2px);
+        box-shadow: none;
+    }
+
+    &__main {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    &__sub {
+        font-size: 9px;
+        opacity: 0.7;
+    }
+}

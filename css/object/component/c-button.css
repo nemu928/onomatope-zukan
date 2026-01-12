@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/ /*ボタン全般の設定*/
+.c-button {
+  display: block;
+}
+.c-button__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.c-button__icon--search {
+  background-image: url(../image/icon_search.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.c-button__icon--home {
+  background-image: url(../image/icon_home.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.c-button__icon--album {
+  background-image: url(../image/icon_book.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.c-button .c-btn-challenge {
+  display: block;
+  margin: 30px auto 0;
+  width: 200px;
+  padding: 12px;
+  border-radius: 50px;
+  background-color: #ddd;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 0 #bbb;
+}
+.c-button .c-btn-challenge:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #bbb;
+}
+.c-button .c-btn-challenge.is-active {
+  background-color: #FF9898;
+  box-shadow: 0 4px 0 #ff6565;
+  pointer-events: none;
+}
+
+.c-btn-challenge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #ccc;
+  border: 3px dashed #ccc;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.5, 1.8, 0.5, 0.8);
+}
+.c-btn-challenge:hover {
+  transform: scale(1.1) rotate(-5deg);
+  background-color: #f9f9f9;
+  color: #aaa;
+  border-color: #aaa;
+}
+.c-btn-challenge.is-active {
+  color: #ff5555;
+  border: 4px double #ff5555;
+  background-color: #fff;
+  font-size: 13px;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  transform: scale(1.1) rotate(-15deg);
+  box-shadow: none;
+}
+.c-btn-challenge.is-active:hover {
+  opacity: 0.7;
+  transform: scale(1) rotate(-15deg);
+  background-color: #fff0f0;
+}
+/*# sourceMappingURL=c-button.css.map */

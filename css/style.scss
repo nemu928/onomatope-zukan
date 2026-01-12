@@ -1,0 +1,35 @@
+/* style.scss */
+
+// 1. Foundation（リセット、変数など、全ての土台）
+@import "foundation/reset.scss";
+@import "foundation/typography.scss";
+@import "foundation/variables.scss";
+@import "foundation/mixin.scss";
+
+
+// 2. Layout（ヘッダー、フッターなど、ページの骨組み）
+@import "layout/l-main.scss";
+@import "layout/l-header.scss";
+
+
+
+// 3. Objects
+/*component*/
+@import "object/component/c-button.scss";
+@import "object/component/c-cord.scss";
+@import "object/component/c-footer-nav.scss";
+@import "object/component/c-logo.scss";
+@import "object/component/c-modal.scss";
+@import "object/component/c-tab-switch.scss";
+@import "object/component/c-read-button.scss";
+
+
+/*project*/
+@import "object/project/p-album.scss";
+@import "object/project/p-content__text.scss";
+@import "object/project/p-features-section.scss";
+@import "object/project/p-hero-area.scss";
+@import "object/project/p-onomatope-list.scss";
+@import "object/project/p-read-section.scss";
+@import "object/project/p-usage-section.scss";
+

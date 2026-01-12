@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/
+.p-features-section {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-width: 294px;
+  min-height: 900px;
+  background: repeating-linear-gradient(-45deg, #FFDD9D, #FFDD9D 40px, #FFF2D9 40px, #FFF2D9 80px);
+}
+.p-features-section__contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  min-width: 320px;
+  text-align: justify;
+}
+.p-features-section__contents h2 {
+  padding-bottom: 8px;
+}
+.p-features-section__contents::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 80vw;
+  height: 80vw;
+  min-width: 350px;
+  min-height: 350px;
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 50%;
+  background-color: #FFF2D9;
+}
+/*# sourceMappingURL=p-features-section.css.map */

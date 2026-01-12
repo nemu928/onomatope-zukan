@@ -1,0 +1,43 @@
+// 5. クロージング (スクロールフェードイン対象)
+@use "../../foundation/variables.scss" as var;
+@use "../../foundation/mixin.scss";
+
+.p-read-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    padding: var.$spacing-xl-m;
+
+    width: 100%;
+    
+    background-color: var.$color-pink;
+
+    text-align: center;
+
+    &__paragraph{
+        //初期状態とアニメーション時間
+        opacity: 0;
+        transform: translateY(20px); /* 少し下にずらす */
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        
+        //表示状態(jsによってこのクラスが付与された時の)
+        &--is-visible{
+            opacity: 1; 
+            transform: translateY(0);
+        }
+
+        //順番に表示させるための遅延とレイアウト設定
+        &:nth-of-type(2){
+            margin-top: var.$spacing-m;
+            transition-delay: 0.2s;
+        }
+        &:nth-of-type(3){
+            margin-top: var.$spacing-m; 
+            margin-bottom: var.$spacing-m;
+            transition-delay: 0.4s;
+        }
+    }
+
+}

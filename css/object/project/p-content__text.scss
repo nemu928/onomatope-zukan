@@ -1,0 +1,28 @@
+    // pタグのバリエーション
+    @use "../../foundation/variables.scss" as var;
+
+  .p-content__text{
+    text-align: center;
+
+    &--size-xl{
+        font-size: var.$font-size-xl;
+        line-height: 48px;
+    }
+    &--size-l{
+        font-size: var.$font-size-l;
+        line-height: 40px;
+    
+    }
+    &--size-m{
+        font-size: var.$font-size-m;
+    }
+    &--size-s{
+        font-size: var.$font-size-s;
+    }
+    &--size-xs{
+        font-size: var.$font-size-xs;
+    }
+    &--size-xxs{
+        font-size: var.$font-size-xxs;
+    }
+  }

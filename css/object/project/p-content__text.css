@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/
+.p-content__text {
+  text-align: center;
+}
+.p-content__text--size-xl {
+  font-size: 22px;
+  line-height: 48px;
+}
+.p-content__text--size-l {
+  font-size: 20px;
+  line-height: 40px;
+}
+.p-content__text--size-m {
+  font-size: 18px;
+}
+.p-content__text--size-s {
+  font-size: 16px;
+}
+.p-content__text--size-xs {
+  font-size: 15px;
+}
+.p-content__text--size-xxs {
+  font-size: 14px;
+}
+/*# sourceMappingURL=p-content__text.css.map */

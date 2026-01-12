@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/
+.l-header {
+  position: fixed;
+  display: flex;
+  z-index: 100;
+  padding-right: 30px;
+  padding-left: 30px;
+  height: 70px;
+  align-items: center;
+}
+/*# sourceMappingURL=l-header.css.map */

@@ -1,0 +1,104 @@
+/*画面下部のナビゲーション*/
+@use "../../foundation/variables.scss" as var;
+
+.c-footer-nav{
+    position: fixed;
+    z-index: 100;
+
+    bottom: 0;
+
+    width: 100%;
+    height: 70px;
+
+    border-radius: 20px 20px 0 0;
+    background-color: var.$color-navigation;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+
+    &__list{
+        //3つの要素を横並び
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 58px;
+        border-radius: 20px 20px 0 0;
+        background-color: var.$color-navigation;
+    }
+
+    &__item{
+        //hoveranimationのため
+        position: relative;
+        overflow: hidden;
+
+        //中央寄せのため
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 105px;
+        height: 40px;
+
+        //初期カラー
+        background-color: var.$color-navigation;
+
+        border-radius: 50px;
+        
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+           // ★変更: 基準点を左上から「ど真ん中」に変更
+            top: 50%;
+            left: 50%;
+            
+            // ★追加: 要素の中心を基準点に合わせる魔法のコード
+            transform: translate(-50%, -50%);
+            width: 0%;
+            height: 100%;
+            background-color: var.$color-primary;
+            transition: .3s; // ★変更: 少しゆっくりにしてふわっとさせる（0.1sだと速すぎるかも）
+            
+            // ★追加: ここで背景を丸くします
+            border-radius: 50px; 
+            
+            // ★追加: 文字やアイコンの下に背景が来るようにする
+            z-index: 0; 
+        }
+
+        &:hover::before{
+            width: 100%;
+        }
+    }
+
+    &__link {
+        // ★追加: 背景(::before)より手前に表示させる
+        position: relative; 
+        z-index: 10;
+        
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-decoration: none;
+        overflow: hidden;
+        transition: width 0.3s ease, background-color 0.3s ease;
+        white-space: nowrap;
+    }
+
+    &__text{
+        /* 初期状態では幅を0に設定 */
+    width: 0; 
+    margin-left: 0;
+    opacity: 0; /* 透明度も0に */
+    transition: width 0.3s ease, margin-left 0.3s ease, opacity 0.3s ease;
+    font-size: var.$font-size-xxs;
+    }
+}
+
+.c-footer-nav__link:hover .c-footer-nav__text {
+    /* テキストを表示するための幅を設定（例として50px） */
+    width: 50px; 
+    margin-left: 8px; /* アイコンとテキストの間隔 */
+    opacity: 1; /* 表示 */
+    
+}
+

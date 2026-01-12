@@ -1,0 +1,16 @@
+/*main*/
+@use "../foundation/mixin.scss" as mixin;
+@use "../foundation/variables.scss" as var;
+
+
+.l-main {
+    width: 100%;
+    min-height: 100vh;
+
+   background-color: var.$color-navigation; // 少しクリーム色
+        background-image: 
+        linear-gradient(#e0e0e0 1px, transparent 1px),
+        linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+        background-size: 20px 20px; // 20pxごとのマス目
+
+}

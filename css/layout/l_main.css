@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/ /*メディアクエリ機能*/ /*main*/
+.l-mian {
+  width: 100%;
+  background-color: #A3C7FF;
+}
+@media screen and (min-width: 1024px) {
+  .l-mian {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*# sourceMappingURL=l_main.css.map */

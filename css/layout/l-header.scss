@@ -1,0 +1,14 @@
+@use "../foundation/variables.scss" as var;
+
+.l-header{
+    position: fixed;
+    display: flex;
+    z-index: 100;
+
+    padding-right: var.$spacing-m;
+    padding-left: var.$spacing-m;
+
+    height: 70px;
+
+    align-items: center;
+}

@@ -1,0 +1,63 @@
+/*Sassの変数定義（色、フォントサイズ、ブレイクポイントなど）*/
+
+
+// --------------------------------------------------
+// 色
+// --------------------------------------------------
+$color-primary:#fcfcfc;
+$color-navigation:#fffdf5;
+$color-text-base: #45362C;
+
+$color-orenge:#FFDD9D;
+$color-orenge-shadow:#e0ac4a;
+$color-brown:#B39783;
+$color-blue:#A3C7FF;
+$color-cream:#FFF2D9;
+$color-green:#A9F0B0;
+$color-pink:#FFD0DE;
+$color-purple:#A3A5FF;
+$color-red:#FF9898;
+$color-yellow:#ffee8f;
+
+$color-modal-bg:rgba(255, 255, 255, 0.1);
+$color-shadow:rgb(0, 0, 0, 0.25);
+
+
+// --------------------------------------------------
+// フォントサイズ
+// --------------------------------------------------
+$font-size-h1:36px;
+$font-size-h2:24px;
+$font-size-h3:20px;
+
+$font-size-xl:22px;  
+$font-size-l:20px;
+$font-size-m:18px;
+$font-size-s:16px;
+$font-size-xs:15px;
+$font-size-xxs:14px;
+
+$font-size-modal:10px;
+
+
+// --------------------------------------------------
+// 余白
+// --------------------------------------------------
+$spacing-xs: 8px;   // 最小のインデント、アイコン周りなど
+$spacing-s:  16px;  // 小さな要素間の間隔
+$spacing-m:  30px;  // 標準的な間隔 (ベース)
+$spacing-l:  40px;  // セクション内の間隔
+$spacing-xl: 64px;  // セクション間の大きな間隔
+$spacing-xxl: 96px; // ページ間の区切りなど
+
+$spacing-l-m:40px 30px; //コンテンツ・アイテムの間隔
+$spacing-xl-m:64px 30px;//セクションの間隔
+
+
+// --------------------------------------------------
+// ブレイクポイント
+// --------------------------------------------------
+$breakpoint-pc:1024px; //pcの最小値
+$breakpoint-tab:768px; //tabletの最小値
+$max-width-site:1200px;
+$min-width-site:380px;

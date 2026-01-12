@@ -1,0 +1,32 @@
+ // 4. オノマトペカード一覧 (最新/おすすめなど)
+@use "../../foundation/variables.scss" as var;
+@use "../../foundation/mixin.scss";
+
+.p-onomatope-list{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: var.$spacing-s;
+
+   box-sizing: border-box;
+
+   margin: var.$spacing-l auto;
+
+   width: 370px;
+
+ 
+
+   @include mixin.media-tab{
+      justify-content: flex-start;
+      width: 688px;
+   }
+
+   @include mixin.media-pc{
+      justify-content: space-around;
+      gap: 29px;
+      margin: var.$spacing-l auto;
+
+      width: 1104px;
+   }
+}

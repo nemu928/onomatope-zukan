@@ -1,0 +1,33 @@
+/*オノマトペ一覧へ飛ばすボタン*/
+@use "../../foundation/variables.scss" as var;
+
+a.btn--read.btn--cubic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: var.$spacing-l;
+
+    width: 360px;
+    height: 63px;
+
+    background-color: var.$color-orenge;
+    border-bottom: 5px solid var.$color-orenge-shadow;
+
+    &:hover {
+    margin-top: 3px;
+    border-bottom: 2px solid var.$color-orenge-shadow;
+    }
+}
+
+
+
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+.fa-position-right {
+  position: absolute;
+  top: calc(50% - .5em);
+  right: 1rem;
+}
