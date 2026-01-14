@@ -103,8 +103,8 @@
   mask-image: url("../image/icon-default.png");
 }
 .c-tab-switch__content .p-content__text--size-s.icon-light::before {
-  -webkit-mask-image: url("./image/icon_lightbulb.png");
-  mask-image: url("./image/icon_lightbulb.png");
+  -webkit-mask-image: url("../image/icon_lightbulb.png");
+  mask-image: url("../image/icon_lightbulb.png");
 }
 .c-tab-switch__content .p-content__text--size-s.icon-nuance::before {
   -webkit-mask-image: url("../image/icon_nuance.png");
